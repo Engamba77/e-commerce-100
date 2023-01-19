@@ -5,6 +5,9 @@ import Forgetpassword from "./forgetpassword";
 import "./index.css";
 import Register from "./register";
 import Login from "./login";
+import Forgetpassword from "./forgetpassword";
+import Prodetails from "./products/prodetails";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
