@@ -2,7 +2,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
+
 import Pages from "./pages";
+
+import Register from "./register";
+import Login from "./login";
+import Forgetpassword from "./forgetpassword";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
