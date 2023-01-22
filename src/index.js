@@ -4,9 +4,7 @@ import "./index.css";
 import Pages from "./pages";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <Pages />
-);
+root.render(<Pages />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
