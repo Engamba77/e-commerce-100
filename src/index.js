@@ -1,19 +1,11 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
-// import reportWebVitals from "./reportWebVitals";
-import Forgetpassword from "./forgetpassword";
-import "./index.css";
-import Register from "./register";
-import Login from "./login";
 
+import Pages from "./pages";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div>
-    <Register />
-    <Login />
-    <Forgetpassword />
-  </div>
+  <Pages />
 );
 
 // If you want to start measuring performance in your app, pass a function
