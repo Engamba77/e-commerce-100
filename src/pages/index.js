@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Forgetpassword from "../forgetpassword";
 import Login from "../login";
 import Register from "../register";
-import Home from "./Home";
 import Layout from "./Layout";
 import NotFound from "./NotFound";
 
