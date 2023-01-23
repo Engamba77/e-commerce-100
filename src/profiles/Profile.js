@@ -14,21 +14,25 @@ function Profile() {
       .catch((err) => {
         console.log(err);
       });
-  },[]);
+  }, []);
   return (
     <div>
-        {profile.map((element, index)=>{
-            const name = element.name.title + " " + element.name.first + " " + element.name.last;
-            const images= element.picture.large;
-            return(
-                
-            <div key = {index}>
-                <ProfileList images={images} name={name} email={element.email} />
-        </div>
-            )
-        })}
+      {profile.map((element, index) => {
+        const name =
+          element.name.title +
+          " " +
+          element.name.first +
+          " " +
+          element.name.last;
+        const images = element.picture.large;
+        return (
+          <div key={index}>
+            <ProfileList images={images} name={name} email={element.email} />
+          </div>
+        );
+      })}
     </div>
-  )
+  );
 }
 
 export default Profile;

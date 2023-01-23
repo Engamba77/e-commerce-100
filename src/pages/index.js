@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ProfileList from "../api";
 import Forgetpassword from "../forgetpassword";
 import Login from "../login";
 import Register from "../register";
@@ -15,7 +14,6 @@ const Pages = () => {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/forgot password" element={<Forgetpassword />}></Route>
         <Route path="*" element={<NotFound />}></Route>
-        <Route path="/profile list" element={<ProfileList />}></Route>
       </Routes>
     </BrowserRouter>
   );

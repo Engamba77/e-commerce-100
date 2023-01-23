@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function ProfileList(item) {
   return (
@@ -7,7 +7,7 @@ function ProfileList(item) {
       <p>{item.name}</p>
       <p>{item.email}</p>
     </div>
-  )
+  );
 }
 
-export default ProfileList
+export default ProfileList;
