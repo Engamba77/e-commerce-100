@@ -1,16 +1,13 @@
-// import React from "react";
+import React from "react";
 
-// function ProList({ product }) {
-//   return (
-//     <div>
-//       <img src={product.img} alt="" />
-//       <div>
-//         <p>{product.Title}</p>
-//         <p>{product.Description}</p>
-//         <p>{product.Price}</p>
-//       </div>
-//     </div>
-//   );
-// }
+function ProfileList(item) {
+  return (
+    <div>
+      <img src={item.img} alt="" />
+      <p>{item.name}</p>
+      <p>${item.price}</p>
+    </div>
+  );
+}
 
-// export default ProList;
+export default ProfileList;

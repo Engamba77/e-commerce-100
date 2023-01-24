@@ -2,13 +2,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import Pages from "./pages";
-import Profile from "./profiles/Profile";
+// import Profile from "./profiles/Profile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
     <Pages />
-    <Profile />
+    {/* <Profile /> */}
   </div>
 );
 

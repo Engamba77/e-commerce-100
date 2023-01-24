@@ -1,21 +1,38 @@
 import React from "react";
-import "./forget.css"
+// import "./forget.css"
+import {
+  StyledHeading,
+  StyledButton,
+  StyledDiv,
+  StyledForm,
+  StyledInput,
+} from "../register/styled";
 
-function Forgetpassword() {
+const Forgetpassword = () => {
   return (
-    <div className="container">
-      <h1 id="head">Forget Password</h1>
-      <div className="fpassword">
-        <label name="password" className="labelname">New Password</label> <br/>
-        <input type="text" placeholder="enter new password" className="inputname"></input>
-      </div> <br/>
-      <div className="rpassword">
-        <label name="reset" className="labelname">confirm Password</label> <br/>
-        <input type="text" placeholder="enter confirm password" className="inputname"></input>
+    <StyledDiv>
+      <StyledHeading>Forgot Password</StyledHeading>
+      <div>
+        <StyledForm>
+          <StyledInput>
+            New Password
+            <input type="text" name="newpass" placeholder="Password" />
+          </StyledInput>
+
+          <StyledInput>
+            Confirm Password
+            <input
+              type="password"
+              name="confirmpass"
+              placeholder="Confirm Password"
+            />
+          </StyledInput>
+
+          <StyledButton onClick={""}>Submit</StyledButton>
+        </StyledForm>
       </div>
-      <div className="buttonok"><button id="buton">Submit</button></div>
-    </div>
+    </StyledDiv>
   );
-}
+};
 
 export default Forgetpassword;

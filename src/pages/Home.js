@@ -11,7 +11,9 @@ const Home = () => {
         <Link to="/register">Register</Link>
         <Link to="/login">Login</Link>
         <Link to="/forgot password">Forgetpassword</Link>
+        <Link to="/prodetails">Products</Link>
       </StyledHeader>
+
       <StyledContent>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -23,8 +25,9 @@ const Home = () => {
         with desktop publishing software like Aldus PageMaker including versions
         of Lorem Ipsum.
       </StyledContent>
+
       <Outlet />
-      <StyledFooter></StyledFooter>
+      <StyledFooter>Footer</StyledFooter>
     </div>
   );
 };
