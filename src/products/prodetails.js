@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import ProfileList from "./prolist";
+import { StyledContent } from "../pages/styled";
+import { MessageContext } from "../cart";
 
 function Profile() {
   const [profile, setProfile] = useState([]);
+  const counter = useContext(MessageContext);
 
   useEffect(() => {
     axios
@@ -19,14 +22,22 @@ function Profile() {
     <div>
       {profile.map((element, index) => {
         return (
-          <div key={index}>
-            <ProfileList
-              img={element.images}
-              name={element.title}
-              price={element.price}
-            />
-            <button>Add to cart</button>
-          </div>
+          <StyledContent>
+            <div key={index}>
+              <ProfileList
+                img={element.images}
+                name={element.title}
+                price={element.price}
+              />
+              <button
+                onClick={() => {
+                  counter();
+                }}
+              >
+                Add to Cart
+              </button>
+            </div>
+          </StyledContent>
         );
       })}
     </div>

@@ -13,6 +13,7 @@ export const StyledFooter = styled.footer`
 `;
 
 export const StyledContent = styled.div`
-  width: auto;
-  height: auto;
+  /* width: auto;
+  height: auto; */
+  border: 1px solid blue;
 `;

@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
+import Profile from "../products/prodetails.js";
+// import ProfileList from "../products/prolist.js";
 import { StyledHeader } from "./styled.js";
 import { StyledFooter } from "./styled.js";
 import { StyledContent } from "./styled.js";
+import { MessageContext } from "../cart/index.js";
 
 const Home = () => {
+  const { count } = useContext(MessageContext);
   return (
     <div>
       <StyledHeader>
@@ -12,18 +17,12 @@ const Home = () => {
         <Link to="/login">Login</Link>
         <Link to="/forgot password">Forgetpassword</Link>
         <Link to="/prodetails">Products</Link>
+        <button>CART{count}</button>
+        <button style={{ margin: "10px" }}>CLEAR CART</button>
       </StyledHeader>
 
       <StyledContent>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        <Profile />
       </StyledContent>
 
       <Outlet />

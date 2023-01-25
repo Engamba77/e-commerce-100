@@ -1,5 +1,4 @@
 import React from "react";
-
 function ProfileList(item) {
   return (
     <div>
