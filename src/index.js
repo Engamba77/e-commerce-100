@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client";
+import { MessageContextProvider } from "./cart";
 import "./index.css";
 
 import Pages from "./pages";
@@ -7,7 +8,10 @@ import Pages from "./pages";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
-    <Pages />
+    <MessageContextProvider>
+      <Pages />
+    </MessageContextProvider>
+
     {/* <Profile /> */}
   </div>
 );

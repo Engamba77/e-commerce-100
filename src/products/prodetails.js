@@ -6,7 +6,8 @@ import { MessageContext } from "../cart";
 
 function Profile() {
   const [profile, setProfile] = useState([]);
-  const counter = useContext(MessageContext);
+
+  const { counter } = useContext(MessageContext);
 
   useEffect(() => {
     axios

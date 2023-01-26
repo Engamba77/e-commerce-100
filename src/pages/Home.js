@@ -17,7 +17,7 @@ const Home = () => {
         <Link to="/login">Login</Link>
         <Link to="/forgot password">Forgetpassword</Link>
         <Link to="/prodetails">Products</Link>
-        <button>CART{count}</button>
+        <button>CART:</button> {count}
         <button style={{ margin: "10px" }}>CLEAR CART</button>
       </StyledHeader>
 
