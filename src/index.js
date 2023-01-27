@@ -3,7 +3,7 @@ import { MessageContextProvider } from "./cart";
 import "./index.css";
 
 import Pages from "./pages";
-// import Profile from "./profiles/Profile";
+import { StyledFooter, StyledHead } from "./pages/styled";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -11,8 +11,6 @@ root.render(
     <MessageContextProvider>
       <Pages />
     </MessageContextProvider>
-
-    {/* <Profile /> */}
   </div>
 );
 

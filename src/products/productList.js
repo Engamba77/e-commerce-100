@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import ProfileList from "./prolist";
 import { StyledContent } from "../pages/styled";
 import { MessageContext } from "../cart";
+import ProductDetails from "./productdetails";
 
-function Profile() {
+function ProductList() {
   const [profile, setProfile] = useState([]);
 
   const { counter } = useContext(MessageContext);
 
   useEffect(() => {
     axios
-      .get("https://api.escuelajs.co/api/v1/products")
+      .get("https://fakestoreapi.com/products?limit=5")
       .then((res) => {
         setProfile(res.data);
       })
@@ -25,8 +25,8 @@ function Profile() {
         return (
           <StyledContent>
             <div key={index}>
-              <ProfileList
-                img={element.images}
+              <ProductDetails
+                img={element.image}
                 name={element.title}
                 price={element.price}
               />
@@ -45,4 +45,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ProductList;

@@ -1,32 +1,20 @@
 import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
-import Profile from "../products/prodetails.js";
-// import ProfileList from "../products/prolist.js";
-import { StyledHeader } from "./styled.js";
-import { StyledFooter } from "./styled.js";
-import { StyledContent } from "./styled.js";
 import { MessageContext } from "../cart/index.js";
+import { StyledHeader } from "./styled.js";
 
 const Home = () => {
   const { count } = useContext(MessageContext);
   return (
     <div>
-      <StyledHeader>
-        Logo
-        <Link to="/register">Register</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/forgot password">Forgetpassword</Link>
-        <Link to="/prodetails">Products</Link>
-        <button>CART:</button> {count}
-        <button style={{ margin: "10px" }}>CLEAR CART</button>
-      </StyledHeader>
-
-      <StyledContent>
-        <Profile />
-      </StyledContent>
-
+      Logo
+      <Link to="/register">Register</Link>
+      <Link to="/login">Login</Link>
+      <Link to="/forgetpassword">Forgetpassword</Link>
+      <Link to="/productList">Products</Link>
+      <button>CART:</button> {count}
+      <button style={{ margin: "10px" }}>CLEAR CART</button>
       <Outlet />
-      <StyledFooter>Footer</StyledFooter>
     </div>
   );
 };
