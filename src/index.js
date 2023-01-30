@@ -3,7 +3,6 @@ import { MessageContextProvider } from "./cart";
 import "./index.css";
 
 import Pages from "./pages";
-import { StyledFooter, StyledHead } from "./pages/styled";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
