@@ -11,8 +11,8 @@ const Layout = () => {
       <Link to="/login">Login</Link>
       <Link to="/forgetpassword">Forgetpassword</Link>
       <Link to="/products">Products</Link>
-      <button>CART:</button> {count}
-      {/* <button style={{ margin: "10px" }}>CLEAR CART</button> */}
+      {/* <button>CART:</button> {count} */}
+      <Link to="/CartItems"><button>CART:</button></Link>{count}
       <Outlet />
     </div>
   );

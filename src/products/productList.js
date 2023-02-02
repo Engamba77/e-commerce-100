@@ -7,7 +7,7 @@ import ProductDetails from "./productdetails";
 function ProductList() {
   const [profile, setProfile] = useState([]);
 
-  const { counter } = useContext(MessageContext);
+  const { counter, setCartProducts } = useContext(MessageContext);
 
   useEffect(() => {
     axios
@@ -19,6 +19,11 @@ function ProductList() {
         console.log(err);
       });
   }, []);
+
+  const addToCart = (product) => {
+    setCartProducts((prevProducts) => [...prevProducts, product]);
+  };
+
   return (
     <div>
       {profile.map((element, index) => {
@@ -30,9 +35,11 @@ function ProductList() {
                 name={element.title}
                 price={element.price}
               />
+
               <button
                 onClick={() => {
                   counter();
+                  addToCart(element);
                 }}
               >
                 Add to Cart
